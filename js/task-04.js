@@ -14,6 +14,7 @@ logForm.addEventListener("submit", (e) => {
     const data = new FormData(e.target);
     data.forEach((value, key) => {
         console.log(`${key} : ${value}`);
+
         obj[key] = value;
     })
     console.log(obj);
