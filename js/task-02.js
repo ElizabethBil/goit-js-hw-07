@@ -29,3 +29,25 @@ const images = [
 ];
 
 
+
+
+const imagesGallery = ({ url, alt }) => {
+  const gall = document.querySelector(".gallery");
+  const image = document.createElement("img");
+  
+  image.className = "img-gall";
+  image.src = url;
+  image.alt = alt;
+  image.width = 400;
+  gall.append(image);
+  return gall;
+}
+
+const markup = images.map(imagesGallery);
+
+
+
+
+
+
+
