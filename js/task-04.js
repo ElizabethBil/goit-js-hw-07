@@ -6,9 +6,10 @@ const obj = {};
 logForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const inputs = document.querySelector("input");
-    if (!inputs.value.trim()) {
+    const inputs = document.querySelectorAll("input");
+    if (Array.from(inputs).some(input => input.value.trim() === "")) {
         alert('All form fields must be filled in')
+        return
     }
  
     const data = new FormData(e.target);
